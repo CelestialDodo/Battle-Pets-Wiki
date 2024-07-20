@@ -94,7 +94,7 @@ body {
     border: 2px solid black; /*2px solid black*/
     border-radius: 15px;
     overflow: hidden;
-    height: 85%; /* Set the height of the image container */
+    max-height: 85%; /* Set the height of the image container */
     width: auto; /* Set the width of the image container */
     max-width: 150px;
     background-color: transparent; /* Optional: Set a background color */
