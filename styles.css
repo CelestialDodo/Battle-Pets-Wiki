@@ -59,12 +59,44 @@ body {
     justify-content: flex-start; /* Align children to the start of the container */
 }
 
+.inner-extra {
+    flex: 1; /* Make all inner containers equally sized */
+    max-height: 300px; /* Maximum height for each inner container */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 10px; /* Padding around the content inside */
+    min-height: 300px; /* Minimum height to prevent collapse if only one element */
+    overflow: auto; /* Adds scrolling if content exceeds max-height */
+    position: relative; /* Make this container a positioned ancestor */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the start of the container */
+    justify-content: flex-start; /* Align children to the start of the container */
+}
+
 .inner-image {
     border: 2px solid black; /*2px solid black*/
     border-radius: 15px;
     overflow: hidden;
     width: 80px; /* Set the width of the image container */
     height: 80px; /* Set the height of the image container */
+    background-color: transparent; /* Optional: Set a background color */
+    margin-bottom: 10px; /* Space between the image container and text */
+    position: relative; /* Ensure image container is positioned relative to its parent */
+}
+
+.inner-image-extra {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 2px solid black; /*2px solid black*/
+    border-radius: 15px;
+    overflow: hidden;
+    height: 85%; /* Set the height of the image container */
+    width: auto; /* Set the width of the image container */
+    max-width: 150px;
     background-color: transparent; /* Optional: Set a background color */
     margin-bottom: 10px; /* Space between the image container and text */
     position: relative; /* Ensure image container is positioned relative to its parent */
@@ -88,6 +120,19 @@ body {
     top: 0; /* Align to the top of the .inner-container */
     left: 110px; /* Start 20px to the right of the .image-container */
     width: calc(100% - 110px); /* End at the right border of the .inner-container */
+    height: 100%; /* Maximum height for the inner container */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.info-extra {
+    position: absolute; /* Position absolutely within the .inner-container */
+    top: 0; /* Align to the top of the .inner-container */
+    left: 175px; /* Start 20px to the right of the .image-container */
+    width: calc(100% - 175px); /* End at the right border of the .inner-container */
     height: 100%; /* Maximum height for the inner container */
     border: 2px solid black;
     border-radius: 15px;
