@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #858585;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    max-width: 500;
+}
+
+.info-item-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    min-width: 1000;
+    max-width: 2500;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    padding: 20px;
+    max-width: 600px; /* Optional: Set a max width for the grid container */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+.info-grid-extra {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 0px; /* Space between columns */
+    padding: 0px;
+    max-width: 3000px; /* Adjust this width as needed */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+.container {
+    width: 90%; /* Adjust this to make the box smaller or larger */
+    height: 90vh; /* Adjust this to make the box smaller or larger */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between inner containers */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    scrollbar-arrow-color: transparent;
+}
+
+.inner {
+    flex: 1; /* Make all inner containers equally sized */
+    max-height: 200px; /* Maximum height for each inner container */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 10px; /* Padding around the content inside */
+    min-height: 200px; /* Minimum height to prevent collapse if only one element */
+    overflow: auto; /* Adds scrolling if content exceeds max-height */
+    position: relative; /* Make this container a positioned ancestor */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the start of the container */
+    justify-content: flex-start; /* Align children to the start of the container */
+}
+
+.inner-image {
+    border: 2px solid black; /*2px solid black*/
+    border-radius: 15px;
+    overflow: hidden;
+    width: 80px; /* Set the width of the image container */
+    height: 80px; /* Set the height of the image container */
+    background-color: transparent; /* Optional: Set a background color */
+    margin-bottom: 10px; /* Space between the image container and text */
+    position: relative; /* Ensure image container is positioned relative to its parent */
+}
+
+.image {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintains the aspect ratio */
+    background-color: transparent; /* Optional: Set a background color */
+}
+
+.inner-text {
+    font-size: 16px; /* Font size for the text */
+    color: black; /* Text color */
+    text-align: left; /* Align the text to the left */
+    margin-top: 0; /* Ensure no additional space above the text */
+}
+
+.info {
+    position: absolute; /* Position absolutely within the .inner-container */
+    top: 0; /* Align to the top of the .inner-container */
+    left: 110px; /* Start 20px to the right of the .image-container */
+    width: calc(100% - 110px); /* End at the right border of the .inner-container */
+    height: 100%; /* Maximum height for the inner container */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.center-text {
+    text-align: center; /* Centers text horizontally */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    border: 2px solid black;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #ffffff85;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #ffffffbb;
+    border: 2px solid black;
+}

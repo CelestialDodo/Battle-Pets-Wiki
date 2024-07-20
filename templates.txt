@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="inner">
+            <div class="inner-image">
+                <img src="images/TemplateImage.jpg" alt="Image" class="image">
+            </div>
+            <div class="inner-text">
+                Your text here
+            </div>
+            <div class="info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h1 class="center-text">Description</h1>
+                        <h3 class="center-text">{This is what the {ITEM_TYPE} Does}</h3>
+                    </div>
+                    <div class="info-item">
+                        <h1 class="center-text">Rarity</h1>
+                        <h3 class="center-text">{Rarity Here}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
