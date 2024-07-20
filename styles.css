@@ -133,6 +133,9 @@ body {
 }
 
 .back-button {
+    position: fixed; /* Fix the button relative to the viewport */
+    top: 10px; /* Distance from the top of the viewport */
+    left: 10px; /* Distance from the left of the viewport */
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid black;
@@ -142,6 +145,7 @@ body {
     text-decoration: none;
     font-size: 40px;
     text-align: center;
+    z-index: 1000; /* Ensure it is above other elements */
 }
 
 .back-button:hover {
