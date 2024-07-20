@@ -42,21 +42,6 @@ body {
     margin: 0 auto; /* Center the grid horizontally */
 }
 
-.container {
-    width: 90%; /* Adjust this to make the box smaller or larger */
-    height: 90vh; /* Adjust this to make the box smaller or larger */
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: transparent;
-    box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between inner containers */
-    overflow-y: auto; /* Allows scrolling if content overflows */
-    scrollbar-arrow-color: transparent;
-}
-
 .inner {
     flex: 1; /* Make all inner containers equally sized */
     max-height: 200px; /* Maximum height for each inner container */
@@ -151,4 +136,54 @@ body {
 .back-button:hover {
     background-color: #ffffffbb;
     border: 2px solid black;
+}
+
+/* Containers Config */
+
+/* WebKit browsers (Chrome, Safari) */
+.container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Color of the scrollbar */
+    border-radius: 10px; /* Optional: Makes the scrollbar round */
+    border: 3px solid transparent; /* Adds space around the scrollbar */
+    background-clip: content-box; /* Ensures the scrollbar is only the color specified */
+}
+
+.container::-webkit-scrollbar-track {
+    background: transparent; /* Hides the scrollbar track */
+}
+
+.container::-webkit-scrollbar-button {
+    display: none; /* Hides the scrollbar arrows */
+}
+
+/* Firefox */
+.container {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #ffffff transparent; /* Color of the scrollbar and track */
+}
+
+/* Internet Explorer and Edge */
+.container {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Automatically hides the scrollbar when not in use */
+}
+
+/* Containers */
+
+.container {
+    width: 90%; /* Adjust this to make the box smaller or larger */
+    height: 90vh; /* Adjust this to make the box smaller or larger */
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between inner containers */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar if present */
 }
